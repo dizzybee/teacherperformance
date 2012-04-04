@@ -1,0 +1,9 @@
+
+/*
+** Blog List
+*/
+.blog-list .views-row {
+    border: 1px solid #000000;
+    background-color:  white;
+    padding: 5px;
+}
