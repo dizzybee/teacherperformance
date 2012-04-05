@@ -12,8 +12,7 @@
 <?php foreach ($rows as $id => $row): ?>
   <div class="<?php print $classes_array[$id]; ?>">
 blah
-    <?php print $row['title']; ?>
-    <?php print field_view_field('node', $row, field_blog_image) ?>
-blah
+    <?php print $row; ?>
+blah1
   </div>
 <?php endforeach; ?>

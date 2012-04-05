@@ -13,6 +13,7 @@
   <div class="<?php print $classes_array[$id]; ?>">
 blah
     <?php print $row['title']; ?>
-blah
+    <?print $fields['title']->content; ?>
+blah2
   </div>
 <?php endforeach; ?>

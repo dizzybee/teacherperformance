@@ -1,9 +1,60 @@
+#main-wrapper {
+  background-color:#dedede;
+}
 
 /*
 ** Blog List
 */
-.blog-list .views-row {
-    border: 1px solid #000000;
-    background-color:  white;
+.blog-list-row {
+    position: relative;
+    float: left;
+    clear: both;
+    padding-bottom: 30px;
+}
+.blog-list-date {
+    float: left;
+    width: 50px;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+.blog-list-content {
+  width:600px;
+  position:relative;
+  float:left;
+}
+
+.blog-list-header {
+    background-color: black;
+    color: white;
+    position: relative;
+    clear: both;
+}
+.blog-list-header, .blog-list-body, .blog-list-footer {
     padding: 5px;
+}
+.blog-list-footer {
+    background-color: green;
+    color: white;
+    position: relative;
+    clear: both;
+}
+
+.blog-list-body {
+    background-color: white;
+    clear: both;
+    float: left;
+    position: relative;
+}
+.blog-list-image {
+    float: left;
+    position: relative;
+}
+
+.blog-list-text {
+    position: relative;
+    float: left;
+    width: 360px;
+    margin-left: 10px;
 }
