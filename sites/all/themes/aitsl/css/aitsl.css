@@ -10,6 +10,7 @@
 
 #page {
   background-image: url('../images/aitsl-background.png');
+  background-color: #b2bb1c;
   background-repeat: no-repeat;
   width: 1200px;
   margin: 0px auto;
@@ -21,17 +22,29 @@
   padding-top: 35px;
 }
 
+h1, h2 {
+  color: #b2bb1c;
+}
+
+.one-sidebar #content {
+width: 600px;
+}
+
+#sidebar-first, #sidebar-second {
+  width: 340px;
+}
+
+#sidebar-second {
+  float: right;
+}
+
 #breadcrumb {
   height:0px;
   display:none;
 }
 
 
-#footer-wrapper:before {
-  content: <img src="../images/footer-top.png"/>;
-}
-
-/*
+/********************************************************************
 ** Blog List
 */
 .blog-list-row {
@@ -134,3 +147,26 @@
 .pager-current {
   text-weight:bold;
 }
+
+/*********************************************************************
+** Latest Blog Posts
+*/
+
+#sidebar-second .block, #sidebar-second .block a {
+  background-color: transparent;
+  border: 0px;
+  color: white;
+}
+
+#sidebar-second block li {
+  padding-bottom: 5px;
+}
+
+.sidebar h2 {
+  color: #b2bb1c;
+  border-top: 1px dotted #ffffff;
+  border-bottom: 1px dotted #ffffff;
+  text-shadow: 0 0px 0 white;
+  padding: 5px 0px;
+}
+
