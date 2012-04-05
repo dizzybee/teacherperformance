@@ -11,8 +11,6 @@
 <?php endif; ?>
 <?php foreach ($rows as $id => $row): ?>
   <div class="<?php print $classes_array[$id]; ?>">
-blah
     <?php print $row; ?>
-blah1
   </div>
 <?php endforeach; ?>

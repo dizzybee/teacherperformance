@@ -25,19 +25,27 @@
 ?>
 
   <div class="blog-list-row">
+    <div class="blog-list-content">
+      <div class="blog-list-header">
+        <div class="left-side">
+          <img src="sites/all/themes/aitsl/images/blog-play.png"/>
+        </div>
+        <div class="right-side">
+          <div class="blog-list-title"><?php print $fields['title']->content; ?></div>
+          <div class="blog-list-author">author: <?php print $fields['name']->content; ?></div>
+        </div>
+      </div>
+
     <div class="blog-list-date">
       <div class="blog-list-day"><?php print $fields['created']->content; ?></div>
       <div class="blog-list-month"><?php print $fields['created_1']->content; ?></div>
     </div>
-    <div class="blog-list-content">
-      <div class="blog-list-header">
-        logo
-        <div class="blog-list-title"><?php print $fields['title']->content; ?></div>
-        <div class="blog-list-author"><?php print $fields['name']->content; ?></div>
-      </div>
       <div class="blog-list-body">
         <div class="blog-list-image"><?php print $fields['field_blog_image']->content; ?></div>
-        <div class="blog-list-text"><?php print $fields['body']->content; ?></div>
+        <div class="blog-list-text">
+          <?php print $fields['body']->content; ?>
+          <a href="<?php print $fields['path']->content; ?>" alt="View Blog Post"><img src="sites/all/themes/aitsl/images/blog-list-view-button.png"/></a>
+        </div>
       </div>
       <div class="blog-list-footer">
         <div class="blog-list-comment"><?php print $fields['comment_count']->content; ?> Comments</div>

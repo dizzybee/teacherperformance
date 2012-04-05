@@ -27,7 +27,6 @@
  * @ingroup views_templates
  */
 ?>
-in the blog list
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
