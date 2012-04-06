@@ -89,9 +89,16 @@
   <div id="header" class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>"><div class="section clearfix">
 
     <?php if ($logo): ?>
+
+<!-- THE FOLLOWING LINE WAS CHANGED AS THE LOGO DOES NOT LINK TO THIS HOMEPAGE, BUT RATHER TO THE AITSL HOMEPAGE --> 
+<!--
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-        <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-      </a>
+-->
+      <div id="logo">
+        <a href="http://www.aitsl.edu.au" title="<?php print t('Home'); ?>" rel="home">
+          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+        </a>
+      </div>
     <?php endif; ?>
 
     <?php if ($site_name || $site_slogan): ?>
@@ -106,7 +113,10 @@
             </div>
           <?php else: /* Use h1 when the content title is empty */ ?>
             <h1 id="site-name"<?php if ($hide_site_name) { print ' class="element-invisible"'; } ?>>
+<!-- DO NOT LINK TO FRONT PAGE OF SITE, BUT TO AITSLs HOMEPAGE
               <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+-->
+              <a href="http://www.aitsl.edu.au" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
             </h1>
           <?php endif; ?>
         <?php endif; ?>

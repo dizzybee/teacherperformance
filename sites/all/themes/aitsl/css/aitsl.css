@@ -43,8 +43,38 @@
 #header {
   background-color: transparent;
   background-image: none;
-  padding-top: 35px;
 }
+
+#logo img {
+  width: 155px;
+}
+
+#logo {
+  float:left;
+  position:relative;
+  margin-top: 40px;
+}
+
+#name-and-slogan {
+  position:absolute;
+  font-size: 0.5em;
+  padding-top:20px;
+}
+
+#header a {
+  color: #848484;
+}
+
+.region-header .block-menu {
+  border: 0px solid;
+  float:left;
+  border-right: 1px solid #848484;
+}
+
+.region-header .block-menu li {
+  text-align:right;
+}
+
 
 h1, h2 {
   color: #b2bb1c;
@@ -76,7 +106,7 @@ width: 540px;
 ** Forms
 */
 
-.form-textarea, .form-text, .grippie {
+.form-textarea, .form-text, .grippie, .comment-text {
   background-color: #ffffff;
   opacity:0.4;
   filter:alpha(opacity=40); /* For IE8 and earlier */
@@ -123,9 +153,9 @@ width: 540px;
 .blog-list-header {
   background-image: url('../images/blog-list-header.png');
   background-color:#373737;
-    color: white;
-    position: relative;
-    clear: both;
+  color: white;
+  position: relative;
+  clear: both;
 }
 .blog-list-header, .blog-list-body, .blog-list-footer {
     padding: 8px;
