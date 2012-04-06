@@ -2,6 +2,7 @@
   background-color: transparent;
 }
 
+
 #page-wrapper {
   background-color: #b2bb1c;
   background-image: url('../images/aitsl-background-repeat.png');
@@ -10,6 +11,11 @@
 
 #page, #footer-wrapper .section {
   width: 1200px;
+  margin: 0px auto;
+}
+
+#header, #main-wrapper {
+  width: 900px;
   margin: 0px auto;
 }
 
@@ -45,11 +51,11 @@ h1, h2 {
 }
 
 .one-sidebar #content {
-width: 600px;
+width: 540px;
 }
 
 #sidebar-first, #sidebar-second {
-  width: 340px;
+  width: 360px;
 }
 
 #sidebar-second {
@@ -60,6 +66,11 @@ width: 600px;
   height:0px;
   display:none;
 }
+
+.block ol, .block ul {
+  padding: 0 0 0.25em 1.5em;
+}
+
 
 /********************************************************************
 ** Forms
@@ -79,7 +90,7 @@ width: 600px;
   float: left;
   clear: both;
   padding-bottom: 30px;
-  width: 800px;
+  width: 540px;
 }
 
 .blog-list-date {
@@ -104,7 +115,7 @@ width: 600px;
 }
 
 .blog-list-content {
-  width:600px;
+  width:540px;
   position:relative;
   float:left;
 }
@@ -149,6 +160,7 @@ width: 600px;
     clear: both;
     float: left;
     position: relative;
+    width:525px;
 }
 .blog-list-image {
     float: left;
@@ -158,7 +170,7 @@ width: 600px;
 .blog-list-text {
     position: relative;
     float: left;
-    width: 350px;
+    width: 260px;
     margin-left: 10px;
 }
 
