@@ -112,7 +112,7 @@ width: 540px;
 }
 
 /********************************************************************
-** Blog List
+** Blog & Podcast Lists
 */
 .blog-list-row {
   position: relative;
@@ -167,8 +167,9 @@ width: 540px;
   margin: auto 0px;
 }
 
-.blog-list-title a{
+.blog-list-title a, .podcast-list-title a {
   color: #b2bb1c;
+  font-size: 1.5em;
 }
 
 .blog-list-author {
@@ -191,16 +192,61 @@ width: 540px;
     position: relative;
     width:525px;
 }
-.blog-list-image {
+
+.blog-list-image, .podcast-list-image {
     float: left;
     position: relative;
 }
 
-.blog-list-text {
+.blog-list-text, .podcast-list-text {
     position: relative;
     float: left;
-    width: 260px;
     margin-left: 10px;
+}
+
+.blog-list-text {
+    width: 260px;
+}
+
+.podcast-list-text {
+  width: 280px;
+}
+
+.view-podcast-list tr td, .view-podcast-list tr th {
+  border: 0px;
+  padding: 0px 5px 15px 0px;
+  margin:0px;
+}
+
+.podcast-list-row {
+  padding: 10px;
+  background-color: white;
+  position:relative;
+  float:left;
+}
+
+#podcast-page-view {
+  position:relative;
+  float:left;
+  clear:both;
+  color: #ffffff;
+  background-color: black;
+  padding: 15px;
+}
+
+.podcast-list-row.sticky {
+  border: 2px solid #000000;
+  background-color: #ffff00;
+}
+
+.podcast-page-image, .podcast-page-text {
+  position: relative;
+  float: left;
+}
+
+.podcast-page-text {
+  width: 350px;
+  padding-right: 10px;
 }
 
 .meta.submitted {
