@@ -8,13 +8,31 @@
   background-repeat: repeat-x;
 }
 
+#page, #footer-wrapper .section {
+  width: 1200px;
+  margin: 0px auto;
+}
+
 #page {
   background-image: url('../images/aitsl-background.png');
   background-color: #b2bb1c;
   background-repeat: no-repeat;
-  width: 1200px;
-  margin: 0px auto;
 }
+
+#footer-wrapper {
+  padding: 0px;
+  background-image: url('../images/footer-top.png');
+  background-repeat: no-repeat;
+  background-position: -50px 0px;
+  background-attachment: fixed;
+  min-height: 100px;
+}
+
+#footer-image {
+  top: -25px;
+  position: relative;
+}
+
 
 #header {
   background-color: transparent;
@@ -43,6 +61,15 @@ width: 600px;
   display:none;
 }
 
+/********************************************************************
+** Forms
+*/
+
+.form-textarea, .form-text, .grippie {
+  background-color: #ffffff;
+  opacity:0.4;
+  filter:alpha(opacity=40); /* For IE8 and earlier */
+}
 
 /********************************************************************
 ** Blog List
@@ -135,6 +162,10 @@ width: 600px;
     margin-left: 10px;
 }
 
+.meta.submitted {
+  color: #DEDEDE;
+}
+
 .pager {
   margin:0px;
   float:left;
@@ -158,7 +189,7 @@ width: 600px;
   color: white;
 }
 
-#sidebar-second block li {
+#sidebar-second .block li {
   padding-bottom: 5px;
 }
 

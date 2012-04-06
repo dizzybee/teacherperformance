@@ -224,10 +224,15 @@
     </div></div> <!-- /#triptych, /#triptych-wrapper -->
   <?php endif; ?>
 
+
+</div> <!-- /#page, -->
+
   <div id="footer-wrapper">
-    <img src="<?php print $directory; ?>/images/footer-top.png"/>
   <div class="section">
 
+    <div id="footer-image">
+      <img src="<?php print $base_path; ?>/sites/all/themes/aitsl/images/footer-top.png"/>
+    </div>
     <?php if ($page['footer_firstcolumn'] || $page['footer_secondcolumn'] || $page['footer_thirdcolumn'] || $page['footer_fourthcolumn']): ?>
       <div id="footer-columns" class="clearfix">
         <?php print render($page['footer_firstcolumn']); ?>
@@ -245,4 +250,4 @@
 
   </div></div> <!-- /.section, /#footer-wrapper -->
 
-</div></div> <!-- /#page, /#page-wrapper -->
+</div> <!-- /#page-wrapper -->
