@@ -27,7 +27,9 @@
   <div class="podcast-list-row <?php if (strcasecmp($fields['sticky']->content,"True")==0) { print 'sticky'; } ?>">
     <div class="podcast-list-content">
       <div class="podcast-list-body ">
-        <div class="podcast-list-image"><?php print $fields['field_video_podcast']->content; ?></div>
+        <div class="podcast-list-image">
+          <?php if ($variables['type'] == "audio") { print 'audio'; } else { print $fields['field_podcast_upload']->content; } ?>
+        </div>
         <div class="podcast-list-text">
           <div class="podcast-list-title"><?php print $fields['title']->content; ?></div>
 <?php print $fields['sticky']->content; ?>

@@ -111,10 +111,30 @@
       </div>
       <div class="podcast-page-image">
 
-<!--
-        <?php if(isset($content['field_video_podcast'])) { print render($content['field_video_podcast']); } else { print render($content['field_audio_podcast']); }?>
--->
-        <?php if(isset($content['field_podcast_upload'])) { print render($content['field_podcast_upload']); }?>
+        <?php 
+          if(isset($content['field_podcast_upload'])) { 
+    $items = field_get_items('node', $node, 'field_podcast_upload', $node->language);
+    $id = $items[0];
+    $variables['filename'] = $id['filename'];
+    $variables['type'] = $id['type'];
+            if ($variables['type'] != "audio") {
+              ?>
+              <div class="podcast-mediaelement-video">
+                <video src="http://localhost/teacherperformance/sites/default/files/podcasts/<?php print t($variables['filename']); ?>" class="mediaelement-formatter-identifier-1333788361-0" controls="controls" height="300" width="350"></video> 
+              </div>
+         <?php
+            } 
+            else { 
+
+         ?>
+              <div class="podcast-mediaelement-audio">
+                <img src="http://localhost/teacherperformance/sites/all/themes/aitsl/images/blog-no-image.png" />
+                <video src="http://localhost/teacherperformance/sites/default/files/podcasts/<?php print t($variables['filename']); ?>" class="mediaelement-formatter-identifier-1333788361-0" controls="controls" height="30" width="350"></video> 
+              </div>
+         <?php
+            }
+          }
+        ?>
 
       </div>
     </div>
@@ -123,7 +143,6 @@
         // We hide the comments and links now so that we can render them later.
         hide($content['comments']);
         hide($content['links']);
-        print render($content);
       ?>
     </div>
   </div>

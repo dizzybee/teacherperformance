@@ -197,8 +197,13 @@ width: 540px;
 }
 
 .blog-list-image, .podcast-list-image {
-    float: left;
-    position: relative;
+  float: left;
+  position: relative;
+  clear:left;
+}
+
+.podcast-page-image {
+  width: 350px;
 }
 
 .blog-list-text, .podcast-list-text {
@@ -250,6 +255,16 @@ width: 540px;
 .podcast-page-text {
   width: 350px;
   padding-right: 10px;
+}
+
+.podcast-mediaelement-audio video {
+  float:left;
+  position:relative;
+}
+
+.podcast-mediaelement-audio img {
+  height:250px;
+  margin: 0px auto;
 }
 
 .meta.submitted {
