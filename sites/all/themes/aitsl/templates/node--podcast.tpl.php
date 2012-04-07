@@ -100,8 +100,9 @@
 
   <div id="podcast-page-view-wrapper">
     <div id="podcast-page-latest">
-here
+<!--
       <?php echo views_embed_view('latest_podcast', $display_id = 'block'); ?>
+-->
     </div>
     <div id="podcast-page-view">
       <div class="podcast-page-text">
@@ -109,7 +110,12 @@ here
         <?php print render($content['body']); ?>
       </div>
       <div class="podcast-page-image">
+
+<!--
         <?php if(isset($content['field_video_podcast'])) { print render($content['field_video_podcast']); } else { print render($content['field_audio_podcast']); }?>
+-->
+        <?php if(isset($content['field_podcast_upload'])) { print render($content['field_podcast_upload']); }?>
+
       </div>
     </div>
     <div class="content clearfix"<?php print $content_attributes; ?>>
