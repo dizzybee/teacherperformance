@@ -78,6 +78,9 @@
  * @see template_process()
  */
 ?>
+<?php
+  $variables['base_url'] = 'http://localhost/teacherperformance';
+?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
 
@@ -90,23 +93,22 @@
   <?php print render($title_suffix); ?>
  
 
-  <?php if ($display_submitted): ?>
-    <div class="meta submitted">
-      <?php print $user_picture; ?>
-      <?php print $submitted; ?>
-    </div>
-  <?php endif; ?>
-
 
   <div id="podcast-page-view-wrapper">
     <div id="podcast-page-latest">
-<!--
-      <?php echo views_embed_view('latest_podcast', $display_id = 'block'); ?>
--->
+        <?php echo views_embed_view('latest_podcast', $display_id = 'block'); ?>
     </div>
     <div id="podcast-page-view">
       <div class="podcast-page-text">
         <h2><?php print render($title); ?></h2>
+
+        <?php if ($display_submitted): ?>
+          <div class="meta submitted">
+            <?php print $user_picture; ?>
+            <?php print $submitted; ?>
+          </div>
+        <?php endif; ?>
+
         <?php print render($content['body']); ?>
       </div>
       <div class="podcast-page-image">
@@ -120,7 +122,7 @@
             if ($variables['type'] != "audio") {
               ?>
               <div class="podcast-mediaelement-video">
-                <video src="http://localhost/teacherperformance/sites/default/files/podcasts/<?php print t($variables['filename']); ?>" class="mediaelement-formatter-identifier-1333788361-0" controls="controls" height="300" width="350"></video> 
+                <video src="<?php print $variables['base_url'];?>/sites/default/files/podcasts/<?php print t($variables['filename']); ?>" class="mediaelement-formatter-identifier-1333788361-0" controls="controls" height="300" width="350"></video> 
               </div>
          <?php
             } 
@@ -128,16 +130,26 @@
 
          ?>
               <div class="podcast-mediaelement-audio">
-                <img src="http://localhost/teacherperformance/sites/all/themes/aitsl/images/blog-no-image.png" />
-                <video src="http://localhost/teacherperformance/sites/default/files/podcasts/<?php print t($variables['filename']); ?>" class="mediaelement-formatter-identifier-1333788361-0" controls="controls" height="30" width="350"></video> 
+                <img src="<?php print $variables['base_url'];?>/sites/all/themes/aitsl/images/blog-no-image.png" />
+                <video src="<?php print $variables['base_url'];?>/sites/default/files/podcasts/<?php print t($variables['filename']); ?>" class="mediaelement-formatter-identifier-1333788361-0" controls="controls" height="30" width="350"></video> 
               </div>
          <?php
             }
           }
         ?>
-
       </div>
     </div>
+  <div id="podcast-page-view-footer">
+      <div id="podcast-page-latest-heading">
+        <a href="<?php print $variables['base_url'];?>/podcasts">Latest Podcasts</a>
+      </div>
+      <div class="podcast-social">
+        <?php
+          $block = module_invoke('block', 'block_view', '1');
+          print render($block['content']);
+        ?>
+      </div>
+  </div>
     <div class="content clearfix"<?php print $content_attributes; ?>>
       <?php
         // We hide the comments and links now so that we can render them later.

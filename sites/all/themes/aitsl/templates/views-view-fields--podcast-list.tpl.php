@@ -28,7 +28,7 @@
     <div class="podcast-list-content">
       <div class="podcast-list-body ">
         <div class="podcast-list-image">
-          <?php if ($variables['type'] == "audio") { print 'audio'; } else { print $fields['field_podcast_upload']->content; } ?>
+          <?php print substr(strrchr($fields['field_podcast_upload_1']->content, "."), 1 );  ?>
         </div>
         <div class="podcast-list-text">
           <div class="podcast-list-title"><?php print $fields['title']->content; ?></div>
